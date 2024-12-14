@@ -1,0 +1,621 @@
+#tituloForum{
+    padding-left: 8rem;
+    margin-bottom: 1rem;
+    font-size: 2.7rem;
+    color: #DF4C83;
+    display: flex
+}
+
+#tituloForum::before{
+    content: '';
+    position: absolute;
+    margin-top: 3.3rem;
+    width: 20%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #DF4C83;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+#tituloForum:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+#forumContainer{
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.post{
+    width:60%;
+    border: pink solid 0.4rem;
+    border-radius: 3rem;
+    padding: 2rem 4rem 3rem 4rem;
+    margin: 3rem 0rem 3rem 0rem;
+    transition: transform 0.2s ease-in;
+}
+
+.loginPost{
+    font-size: medium;
+    margin-bottom: 2rem;
+}
+
+.conteudoPost{
+    font-size: larger;
+}
+
+.post:hover{
+    box-shadow: pink 2px 2px 10px;
+    transform: scale(1.02);
+}
+
+.comentarios{
+    background-color: rgb(255, 242, 244);
+    padding: 1rem 2rem;
+    margin: 3rem 0rem;
+    border-radius: 2rem;
+}
+
+.comentario{
+    margin-left: 3rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    border-left: pink 3px solid;
+}
+
+.conteudoData{
+    text-align: right;
+    font-size: small;
+    color: grey;
+}
+
+.adicionarComentarioBtn{
+    border: none;
+    background-color: pink;
+    font-size: medium;
+    padding: 0.9rem;
+    border-radius: 1.2rem;
+    color: white;
+    font-family: "mulish";
+    font-weight: bolder;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform .1s ease-in;
+}
+
+.adicionarComentarioBtn:hover{
+    background-color: rgb(253, 182, 194);
+    transform: scale(1.02);
+    box-shadow: pink 0px 0px 5px;
+}
+
+.adicionarComentarioBtn:active{
+    background-color: rgb(255, 169, 184);
+    transform: scale(1);
+    box-shadow: none;
+}
+
+.adicionarPostDIv{
+    text-align: left;
+    margin: 3rem 3rem 3rem 1rem;
+}
+
+.adicionarPostBtn{
+    border: none;
+    background-color: #DF4C83;
+    font-size: larger;
+    padding: 0.8rem;
+    border-radius: 1.2rem;
+    color: white;
+    font-family: "mulish";
+    cursor: pointer;
+}
+
+.adicionarPostBtn:hover{
+    background-color: #f56399;
+    transform: translateY(-0.2rem);
+    box-shadow: rgb(104, 76, 92) 0rem 0.2rem 0.3rem;
+}
+
+.adicionarPostBtn:active{
+    background-color: #ce2c67;
+    transform: translateY(0.2rem);
+    box-shadow: none;
+}
+
+.curtidas{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+}
+
+.curtidasTexto{
+    color: gray;
+}
+
+.curtidaBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8%;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+.imgBtnCurtida{
+
+    width: 10%;
+}
+
+.hidden {
+    display: none;
+}
+
+.imgBtnCurtida {
+    width: 50%;
+    margin-left: -2rem;
+    transition: transform 0.1s ease-in-out;
+    transform: rotate(13deg); /* Colocado no lugar correto */
+}
+
+
+.imgBtnCurtida:hover{
+    filter: brightness(105%);
+    transform: scale(1.1);
+}
+
+.imgBtnCurtida:active{
+    filter: brightness(100%);
+    transform: scale(1);
+}
+
+
+.tituloComentario{
+    background-color: rgb(255, 242, 244);
+    border:none;
+    font-size: medium;
+    font-weight: 700;
+    color:#be1b57;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.tituloComentario:hover{
+    transform: scale(1.08); 
+    cursor: pointer;
+    
+}
+
+textarea{
+    width: 50%;
+    height: 50px;
+}
+
+#modalMensagem{
+    background-color: #fca2c042;
+}
+
+.modal{
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.modal.open{
+    opacity: 1;
+    z-index: 999;
+}
+
+#modalMensagemTexto{
+    text-align: center;
+    color:#ffffff;
+    margin: 4rem 2rem 2.5rem 2rem;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.modal-content{
+	width: 30%;
+    height: 40%;
+    border-radius: 2rem;
+    display: flex;
+    align-content: center;
+    padding: 1%;
+    background-color: #f19dbd;
+    position: relative; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#divBtnModalFechar{
+    text-align: right;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    border-bottom: 4px white solid;
+}
+
+#botaoFecha{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    transition: transform 0.1s ease-in;
+    border-radius: 50%;
+}
+
+#botaoFecha:hover{
+    transform: scale(1.05);
+}
+
+#botaoFecha:active{
+    transform: scale(1.0);
+}
+
+#botaoFecha:focus{
+    border: none;
+    filter: invert(36%) sepia(84%) saturate(2599%) hue-rotate(295deg) brightness(88%) contrast(80%);
+    outline: none;
+}
+
+#btnImagemHome{
+    width: 3.5rem;
+}
+
+#botaoLogar{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    border: 0;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    color: #250c19;
+    background-color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    font-size: medium;
+    width: 13rem;
+    height: 2.6rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 5px 6px 8px rgba(0, 0, 0, 0.226);
+    transition: transform 0.3s ease;
+}
+
+#botaoLogar:hover{
+    transform: scale(1.06);  
+}
+#botaoLogar:active{
+    transform: scale(0.95); 
+    box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.226);
+}
+
+
+.tituloComentario{
+    background-color: rgb(255, 242, 244);
+    border:none;
+    font-size: medium;
+    font-weight: 700;
+    color:#be1b57;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.tituloComentario:hover{
+    transform: scale(1.08); 
+    cursor: pointer;
+    
+}
+
+
+    
+
+textarea{
+    width: 50%;
+    height: 85px;
+}
+
+.enviarComentarioBtn{
+    font-weight: 600;
+    height: 45px;
+    width: 10%;
+    border: none;
+    background-color: pink;
+    font-size: medium;
+    border-radius: 1.2rem;
+    color: rgb(0, 0, 0);
+    font-family: "mulish";
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform .1s ease-in;
+}
+
+.enviarComentarioBtn:hover{
+    background-color: rgb(253, 182, 194);
+    transform: scale(1.02);
+    box-shadow: pink 0px 0px 5px;
+}
+
+.enviarComentarioBtn:active{
+    background-color: rgb(255, 169, 184);
+    transform: scale(1);
+    box-shadow: none;
+}
+
+
+.cancelarComentarioBtn{
+    font-weight: 600;
+    height: 45px;
+    width: 10%;
+    border: none;
+    background-color: rgba(216, 78, 101, 0.801);
+    font-size: medium;
+    border-radius: 1.05rem;
+    color: rgb(255, 255, 255);
+    font-family: "mulish";
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform .1s ease-in;
+}
+
+.cancelarComentarioBtn:hover{
+    background-color: rgba(223, 58, 85, 0.801);
+    transform: scale(1.05);
+    box-shadow: pink 0px 0px 5px;
+}
+
+.cancelarComentarioBtn:active{
+    background-color: rgba(216, 78, 101, 0.801);
+    transform: scale(1);
+    box-shadow: none;
+}
+
+.inputTitulo{
+    width: 100%;
+    height: 50px;
+}
+
+.inputTexto{
+    width: 100%;
+    height: 150px;
+}
+
+
+.postForm{
+    
+    width: 30%;
+    margin: 3rem 3rem 3rem 1rem;
+}
+
+#cancelarPostBtn{
+    font-weight: 600;
+    height: 45px;
+    width: 20%;
+    border: none;
+    background-color: rgba(216, 78, 101, 0.801);
+    font-size: medium;
+    border-radius: 1.05rem;
+    color: rgb(255, 255, 255);
+    font-family: "mulish";
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform .1s ease-in;
+}
+
+#cancelarPostBtn:hover{
+    background-color: rgba(223, 58, 85, 0.801);
+    transform: scale(1.05);
+    box-shadow: rgb(250, 142, 160) 0px 0px 5px;
+}
+
+#cancelarPostBtn:active{
+    background-color: rgba(216, 78, 101, 0.801);
+    transform: scale(1);
+    box-shadow: none;
+}
+
+#salvarPostBtn{
+    font-weight: 600;
+    height: 45px;
+    width: 20%;
+    border: none;
+    background-color: pink;
+    font-size: medium;
+    border-radius: 1.2rem;
+    color: rgb(0, 0, 0);
+    font-family: "mulish";
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform .1s ease-in;
+}
+
+#salvarPostBtn:hover{
+    background-color: rgb(253, 182, 194);
+    transform: scale(1.02);
+    box-shadow: rgb(241, 205, 211) 0px 0px 5px;
+}
+
+#salvarPostBtn:active{
+    background-color: rgb(255, 169, 184);
+    transform: scale(1);
+    box-shadow: none;
+}
+
+#labelTextoPost{
+    font-size: larger;
+}
+
+#labelTituloPost{
+    font-size: larger;
+    
+}
+
+
+#campoBuscaContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+#campoBusca {
+    width: 40%;
+    padding: 0.8rem;
+    margin-right: 1rem;
+    border: 1px solid #DF4C83;
+    border-radius: 1.2rem;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#campoBusca:focus {
+    border-color: #be1b57;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(189, 42, 105, 0.5);
+}
+
+#btnBusca {
+    font-family: "mulish";
+    font-weight: bolder;
+    padding: 0.8rem 1.5rem;
+    background-color: #DF4C83;
+    color: white;
+    border: none;
+    border-radius: 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#btnBusca:hover {
+    background-color: #f56399;
+    transform: translateY(-0.2rem);
+}
+
+#btnBusca:active {
+    background-color: #ce2c67;
+    transform: translateY(0.2rem);
+    box-shadow: none;
+}
+
+.btnOrdenar {
+    font-family: "mulish";
+    font-weight: bolder;
+    padding: 0.8rem 1.5rem;
+    background-color: #ff7aab;
+    color: white;
+    border: none;
+    border-radius: 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0rem 0rem 0rem 2rem;
+}
+
+.btnOrdenar:hover {
+    background-color: #ff95bc;
+    transform: translateY(-0.2rem);
+}
+
+.btnOrdenar:active {
+    background-color: #ff609a;
+    transform: translateY(0.2rem);
+    box-shadow: none;
+}
+
+#botaoFechar {
+    position: absolute; /* Posição em relação ao modal */
+    top: 10px; /* Distância do topo */
+    left: 10px; /* Distância da esquerda */
+    width: 30px; /* Largura da imagem (ajuste conforme necessário) */
+    height: 30px; /* Altura da imagem (ajuste conforme necessário) */
+    cursor: pointer; /* Mostra que é clicável */
+}
+
+/* botao remover */
+.removeBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 8%;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+.imgBtnRemover {
+    width: 60%;
+    margin-left: -2rem;
+    transition: transform 0.1s ease-in-out;
+}
+
+
+.imgBtnRemover:hover{
+    filter: brightness(105%);
+    transform: scale(1.1);
+}
+
+.imgBtnRemover:active{
+    filter: brightness(100%);
+    transform: scale(1);
+}
+
+
+#botaoRemover{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    border: 0;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    color: #250c19;
+    background-color: #FFFFFF;
+    text-align: center;
+    cursor: pointer;
+    font-size: medium;
+    width: 13rem;
+    height: 2.6rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    box-shadow: 5px 6px 8px rgba(0, 0, 0, 0.226);
+    transition: transform 0.3s ease;
+}
+
+#botaoRemover:hover{
+    transform: scale(1.1);  
+}
+#botaoRemover:active{
+    transform: scale(0.95); 
+    box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.226);
+}
+
+.removeDiv{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: -1rem;
+    margin-top: -2.1rem;
+}

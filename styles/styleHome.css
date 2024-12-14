@@ -1,0 +1,378 @@
+@font-face {
+    font-family: 'fonte';
+    src: url('../fonts/Regular\ Brush.otf');
+}
+
+#imagemPrincipal{
+    width: 100%;
+    height: auto;
+    opacity: 80%;
+}
+.section-main-cuidados {
+    background-size: cover;
+    background-position: center;
+    color: black;
+    padding: 50px 0;
+    text-align: center;
+}
+.section-main-cuidados h1 {
+    color: #FFC0CB; /* Rosa claro */
+    font-size: 48px;
+    text-shadow: 2px 2px #000000;
+}
+.section-main-cuidados p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+}
+/* Estilos de Abas */
+.tabs-custom {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.nav-tabs {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+.nav-item {
+    margin: 0 10px;
+}
+.nav-link {
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.nav-link.active {
+    color: pink !important;
+    background-color: transparent;
+}
+.nav-link:hover {
+    color: white;
+    background-color: pink;
+}
+.tab-content {
+    padding: 20px;
+    border: 5px solid pink;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+/* Estilos dos Itens do Cardápio */
+.event-item-modern {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 6px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.event-item-modern:hover {
+    transform: scale(1.05);
+}
+.event-item-modern h4 {
+    color: #000000;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+.event-item-modern p {
+    color: #000000;
+    font-size: 16px;
+}
+.event-time {
+    color: #FFC0CB; /* Rosa claro para destacar o preço */
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* parte navigator da home */
+
+/* parte da nav */
+#navigator{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease; 
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    display: flex;
+    align-items:center;
+    z-index: 1000;
+}
+
+#navigator.scrolled {
+    background-color: pink;
+}
+
+
+#navigator a {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: 'mulishbold';
+    font-weight: bolder;
+    letter-spacing: 0.05rem;
+
+    background-image: linear-gradient(
+    to right,
+    #DF4C83,
+    #DF4C83 50%,
+    #ffffff 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+
+#navigator a:hover {
+    background-position: 0;
+    cursor: pointer;
+}
+
+
+
+#formularioBtn{
+    font-family: "mulish";
+    font-weight: bolder;
+    background-color: transparent;
+    z-index: 1000;
+    margin-bottom: 18rem;
+    border: none;
+    color: #df5789;
+    font-size: 2.2rem;
+    transition: transform 0.5s ease-in-out;
+    text-shadow: rgba(146, 70, 70, 0.555) 0px 0px 10px;
+}
+
+#formularioBtn:hover{
+    transform: scale(1.06);
+}
+
+#formularioBtn:active, #formularioBtn:focus{
+    transform: scale(1);
+    outline: none;
+    border: none;
+}
+
+#imagemFundo{
+    background-image: url(../img/chat2.webp);
+    background-repeat: no-repeat;
+    /* background-size: contain;
+    width: 100%;
+    height: 118vh; */
+    background-size: cover;
+    height: 1024px;
+    opacity: 80%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 1700px) {
+    #imagemFundo{
+        background-image: url(../img/Resp.jpg);
+    }
+}
+@media (max-width: 1626px) {
+    #imagemFundo{
+        background-image: url(../img/Resp1.jpg);
+    }
+}
+
+@media (max-width: 1433px) {
+    #imagemFundo{
+        background-image: url(../img/Resp1.jpg);
+    }
+}
+@media (max-width: 1393px) {
+    #imagemFundo{
+        background-image: url(../img/Resp4.jpg);
+    }
+}
+
+@media (max-width: 1323px) {
+    #imagemFundo{
+        background-image: url(../img/Resp0.jpg);
+    }
+}
+@media (max-width: 1235px) {
+    #imagemFundo{
+        background-image: url(../img/Resp01.jpg);
+    }
+}
+@media (max-width: 1107px) {
+    #imagemFundo{
+        background-image: url(../img/Resp02.jpg);
+    }
+}
+
+@media (max-width: 994px) {
+    #imagemFundo{
+        background-image: url(../img/Resp001.jpg);
+    }
+}
+@media (max-width: 768px) {
+    #imagemFundo{
+        background-image: url(../img/Resp03.jpg);
+    }
+}
+#mensagemHome{
+    font-family: "mulish";
+    color: #df5789;
+    font-size: x-large;
+    text-shadow: rgba(146, 70, 70, 0.555) 0px 0px 10px;
+    font-weight: bolder;
+}
+
+/* parte modal */
+.modalFormulario{
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#modalFormulario{
+    background-color: #fca2c06e;
+}
+
+.modalFormulario.open{
+    opacity: 1;
+    z-index: 999;
+}
+
+#modalFormularioInner{
+	width: 40%;
+	height: 43%;
+	border-radius: 2rem;
+	justify-items: center;
+    display: block;
+    align-content: center;
+	padding: 2rem;
+    background-color: #e2729b;
+}
+
+#msgFormulario{
+    margin-top: 7%;
+    margin-bottom: 7%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#divBtnModalFechar{
+    text-align: right;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: -1.5rem;
+    border-bottom: 4px white solid;
+}
+
+#botaoFecha{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+    transition: transform 0.1s ease-in;
+    border-radius: 50%;
+}
+
+#botaoFecha:hover{
+    transform: scale(1.05);
+}
+
+#botaoFecha:active{
+    transform: scale(1.0);
+}
+
+#botaoFecha:focus{
+    border: none;
+    filter: invert(36%) sepia(84%) saturate(2599%) hue-rotate(295deg) brightness(88%) contrast(80%);
+    outline: none;
+}
+
+#btnImagemHome{
+    width: 3.5rem;
+}
+
+#botaoLogin{
+    border: none;
+    background-color: rgb(255, 213, 220);
+    font-size: 1.4rem;
+    padding: 1rem;
+    border-radius: 1.2rem;
+    color: #e2729b;
+    font-family: "mulish";
+    font-weight: bolder;
+    cursor: pointer;
+    transition: transform .1s ease-in;
+}
+
+#botaoLogin:hover{
+    background-color: rgb(255, 201, 210);
+    transform: scale(1.02);
+}
+
+#botaoLogin:active, #botaoLogin:focus{
+    background-color: rgb(255, 188, 199);
+    transform: scale(1);
+    outline: none;
+    border: none;
+}
+
+
+/* fim modal */
+
+#carouselExampleIndicators{
+    margin: 2rem 10rem;
+}
+
+#embaixadorasTitulo{
+    margin-top: 5rem;
+    text-shadow: 2px 2px #f19dbd;
+    font-family: "mulish";
+    color: #df5789;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#logoChique{
+    font-family: "fonte";
+    font-style: italic;
+}
+
+#carouselEmbaixadores{
+    background-color: #ffe0e6;
+    margin-bottom: 10rem;
+}
+
+
+
+
+
+
