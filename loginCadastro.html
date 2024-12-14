@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleza Verdadeira</title>
+    <style> body, a, a:hover { cursor:url('/img/cursor.png'), auto }</style>
+    <link rel="stylesheet" href="styles/styleGeral.css">
+    <link rel="stylesheet" href="styles/styleLoginCadastro.css">
+    <script src="scripts/login.js"></script>
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+    <script src="scripts/sparkle.js"></script>
+
+</head>
+<body>
+    <div id="conteudo">
+        <div class="modalSucesso" id="modalSucesso">
+            <div id="modalSucessoInner">
+                <h2 id="msgSucesso"> </h2>
+                <button id="botaoVaiHome">Ir para Página Inicial</button>
+            </div>
+        </div>
+        <div class="modal_login" id="modal_login">
+                <div id="modal_login-inner">
+                    <h2>Login inválido!</h2>
+                    <button class="botaologinModal" id="botaoVolta">Tentar novamente</button>
+                    <h3>Novo no site?</h3>
+                    <button class="botaoCadastrar" id="botaoModalCadastro">Fazer cadastro</button>
+                </div>
+            </div>
+        <header id="header"></header>
+        <nav id="nav">
+            <div id="logoDiv">
+                <a href="index.html" id="homeLink"><img src="img/logo.png" alt="Logo do site" id="imgLogo"></a>
+            </div>
+            <div id="restoDiv">
+                <a href="forum.html"id="forumLink">FÓRUM DE PERGUNTAS</a>
+                <a href="perfilUsuario.html" id="usuarioLink"><img src="img/usuario2.png" alt="Ícone usuário básico" id="imgUsuario"></a>
+                <a href="loginCadastro.html" id="loginCadastroLink">CADASTRO/LOGIN</a>
+            </div>
+        </nav>
+        <section id="mainLogin">
+            <div id="divLogin">
+
+                <h2>Faça seu Login</h2>
+
+                <form id="loginForm">
+                    <label for="login" class="labelLogin">Login:</label>
+                    <input type="text" id="login" name="login" class="inputLogin" required>
+                    <br><br>
+                    <label for="senha" class="labelLogin">Senha:</label>
+                    <input type="password" id="senha" name="senha" class="inputLogin" required>
+                    <br>
+                    <p id="mensagemSenhaLogin" class="mensagemSenhaErrada"></p>
+                    <br><br>
+                    <button type="button" id="fazerCadastro">Cadastro</button>
+                    <button id="enterLogin" >Entrar</button>
+                </form>
+            </div>
+            <div id="divCadastro" style="display:none">
+                <h2>Cadastro:</h2>
+                <form id="cadastroForm">
+                    <label for="loginCadastro" class="labelLogin">Usuário:</label>
+                    <input type="text" id="loginCadastro" name="loginCadastro" class="inputLogin" required>
+                    <br>
+                    <span id="mensagemLogin" class="mensagem"></span>
+                    <br><br>
+                    <label for="emailCadastro" class="labelLogin">Email:</label>
+                    <input type="text" id="emailCadastro" name="emailCadastro" class="inputLogin" required>
+                    <br>
+                    <span id="mensagemEmail" class="mensagem"></span>
+                    <br><br>
+                    <label for="senhaCadastro" class="labelLogin">Senha:</label>
+                    <input type="password" id="senhaCadastro" name="senhaCadastro" class="inputLogin" required>
+                    <br>
+                    <span id="spanInutil" class="mensagem"></span>
+                    <br><br>
+                    <label for="senhaVerificacaoCadastro" class="labelVerificaSenha">Verificação de Senha:</label>
+                    <input type="password" id="senhaVerificacaoCadastro" name="senhaVerificacaoCadastro" class="inputLogin" required>
+                    <br>
+                    <span id="mensagemSenha" class="mensagem"></span>
+                    <br><br>
+                    <button id="enterCadastro">Entrar</button>
+                </form>
+
+            </div>
+        </section>
+        <footer id="footer">
+            <p id="footer-principal">Site desenvolvido para o programa TWIST 2024.2</p>
+            <p id="footer-nomes">Fernanda Figueiredo <br>
+            Isabel Amaral <br>
+            Luiza Régnier <br>
+            Maria Luiza Dutra</p>
+            <a href="https://github.com/twistpucrio/cabelo" target="_blank"> <img src="img/github.png" alt="Logo do site GitHub" id="github-logo"></a>
+            <p><a href="sobrenos.html" id="saiba-mais-link">Saiba mais sobre nós</a></p>
+        </footer>
+    </div>
+</body>
+</html>

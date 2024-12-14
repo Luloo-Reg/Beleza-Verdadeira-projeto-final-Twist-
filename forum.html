@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleza Verdadeira</title>
+    <style> body, a, a:hover { cursor:url('/img/cursor.png'), auto }</style>
+    <link rel="stylesheet" href="styles/styleGeral.css">
+    <link rel="stylesheet" href="styles/styleForum.css">
+    <link rel="shortcut icon" href="img/logo2.png" type="image/x-icon">
+    <script src="scripts/forum.js"></script>
+    <script src="scripts/forum-adicionar.js"></script>
+    <script src="scripts/forum-curtidas.js"></script>
+    <script src="scripts/forum-modais.js"></script>
+    <script src="scripts/sparkle.js"></script>
+
+</head>
+<body>
+    <div id="conteudo">
+        <header id="header"></header>
+        <nav id="nav">
+            <div id="logoDiv">
+                <a href="index.html" id="homeLink"><img src="img/logo.png" alt="Logo do site" id="imgLogo"></a>
+            </div>
+            <div id="restoDiv">
+                <a href="forum.html"id="forumLink">FÓRUM DE PERGUNTAS</a>
+                <a href="perfilUsuario.html" id="usuarioLink"><img src="img/usuario2.png" alt="Ícone usuário básico" id="imgUsuario"></a>
+                <a href="loginCadastro.html" id="loginCadastroLink">CADASTRO/LOGIN</a>
+            </div>
+        </nav>
+        <section id="main">
+            <h1 id="tituloForum">Fórum de Dúvidas</h1>
+            
+            <div id="campoBuscaContainer">
+                <input type="text" id="campoBusca" placeholder="Procurar no fórum..." />
+                <button id="btnBusca" onclick="buscarPostPorPalavra(document.getElementById('campoBusca').value)">
+                    Buscar
+                </button>
+                <button id="btnCrescente" class="btnOrdenar">Mais recentes</button>
+                <button id="btnDecrescente" class="btnOrdenar">Mais antigos</button>
+            </div>
+            <div id="forumContainer">
+            </div>
+            <div id="modalMensagem" class="modal">
+                <div id="modal-content" class="modal-content">
+                    <div id="divBtnModalFechar">
+                        <button id="botaoFecha"><img src="https://img.icons8.com/p1em/200/FFFFFF/filled-cancel.png" alt="X para fechar o modal" id="btnImagemHome"></button>
+                    </div>
+                    <p id="modalMensagemTexto"></p>
+                    
+                </div>
+            </div>
+            
+        </section>
+        <footer id="footer">
+            <p id="footer-principal">Site desenvolvido para o programa TWIST 2024.2</p>
+            <p id="footer-nomes">Fernanda Figueiredo <br>
+            Isabel Amaral <br>
+            Luiza Régnier <br>
+            Maria Luiza Dutra</p>
+            <a href="https://github.com/twistpucrio/cabelo" target="_blank"> <img src="img/github.png" alt="Logo do site GitHub" id="github-logo"></a>
+            <p><a href="sobrenos.html" id="saiba-mais-link">Saiba mais sobre nós</a></p>
+        </footer>
+    </div>
+</body>
+</html>
